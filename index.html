@@ -11,72 +11,82 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favico/favicon-16x16.png">
   <link rel="manifest" href="favico/site.webmanifest">
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            dark: '#121212',
-            accent: '#f00000',
-            card: '#1f1f1f'
+            base: "#0f0f11",
+            card: "#1a1a1d",
+            accent: "#ff0033",
+            textlight: "#d1d5db"
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui']
           }
         }
       }
-    };
+    }
   </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-dark text-white font-sans min-h-screen flex flex-col">
+<body class="bg-base text-white font-sans min-h-screen flex flex-col">
 
   <!-- Header -->
-  <header class="bg-accent text-center py-6 shadow-md">
-    <h1 class="text-4xl font-bold tracking-widest">Logan's 3D Creations</h1>
+  <header class="bg-base border-b border-card shadow-sm">
+    <div class="container mx-auto px-6 py-6 text-center">
+      <h1 class="text-4xl font-extrabold tracking-tight text-white">Logan's 3D Creations</h1>
+      <p class="mt-2 text-textlight text-sm">Bold ideas. Precise prints. Limitless imagination.</p>
+    </div>
   </header>
 
   <!-- Navigation -->
-  <nav class="bg-card flex flex-wrap justify-center gap-4 py-4 text-sm font-medium">
-    <a href="index.html" class="hover:text-accent transition">Home</a>
-    <a href="products.html" class="hover:text-accent transition">Products</a>
-    <a href="about.html" class="hover:text-accent transition">About</a>
-    <a href="contact.html" class="hover:text-accent transition">Contact</a>
-    <a href="custom.html" class="hover:text-accent transition">Custom Order</a>
-    <a href="cart.html" class="hover:text-accent transition">Cart</a>
+  <nav class="bg-card border-t border-b border-neutral-800 shadow-sm">
+    <div class="container mx-auto px-6 py-3 flex flex-wrap justify-center gap-4 text-sm font-medium">
+      <a href="index.html" class="text-textlight hover:text-accent transition">Home</a>
+      <a href="products.html" class="text-textlight hover:text-accent transition">Products</a>
+      <a href="about.html" class="text-textlight hover:text-accent transition">About</a>
+      <a href="contact.html" class="text-textlight hover:text-accent transition">Contact</a>
+      <a href="custom.html" class="text-textlight hover:text-accent transition">Custom Orders</a>
+      <a href="cart.html" class="text-textlight hover:text-accent transition">Cart</a>
+    </div>
   </nav>
 
   <!-- Main Content -->
-  <main class="flex-grow container mx-auto px-4 py-10">
-    <div class="flex flex-col items-center space-y-8">
-      <!-- Logo -->
-      <figure>
-        <img src="logo.png" alt="Website Logo" class="max-w-xs md:max-w-sm rounded-lg shadow-md">
-      </figure>
-
-      <!-- Facebook Video Embed -->
-      <div class="w-full max-w-4xl aspect-video overflow-hidden rounded-lg shadow-lg border border-gray-700">
-        <iframe
-          class="w-full h-full"
-          src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FLogans3D%2Fvideos%2F2051717418596981&show_text=false"
-          frameborder="0"
-          allowfullscreen
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-        </iframe>
-      </div>
-
-      <!-- Description -->
-      <section class="text-center max-w-2xl space-y-4">
-        <h2 class="text-2xl font-semibold">Welcome to Logan's 3D Creations</h2>
-        <p class="text-gray-300 leading-relaxed">
-          Our mission is to deliver innovative and high-quality 3D-printed products at a reasonable price range to spark your imagination and creativity.
-        </p>
-      </section>
+  <main class="flex-grow container mx-auto px-6 py-12">
+    <!-- Logo -->
+    <div class="flex justify-center mb-10">
+      <img src="logo.png" alt="Logo" class="w-40 h-auto rounded-lg shadow-lg opacity-90 hover:opacity-100 transition duration-300">
     </div>
+
+    <!-- Video Section -->
+    <div class="relative w-full max-w-5xl mx-auto aspect-video rounded-xl overflow-hidden shadow-xl border border-neutral-800">
+      <iframe
+        class="w-full h-full"
+        src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FLogans3D%2Fvideos%2F2051717418596981&show_text=false"
+        frameborder="0"
+        allowfullscreen
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+      </iframe>
+    </div>
+
+    <!-- Mission Statement -->
+    <section class="mt-12 text-center max-w-3xl mx-auto">
+      <h2 class="text-2xl font-semibold text-white">Reimagining the Art of 3D Printing</h2>
+      <p class="mt-4 text-textlight leading-relaxed text-base">
+        At Logan’s 3D Creations, we combine creativity and precision to craft unique models, collectibles, and customized pieces.
+        Every item is printed in-house with state-of-the-art equipment and unmatched attention to detail.
+        Our mission is to deliver affordable, premium-quality products that spark imagination and exceed expectations.
+      </p>
+    </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-card text-center text-sm text-gray-400 py-6">
+  <footer class="bg-card border-t border-neutral-800 text-center py-6 text-sm text-textlight">
     <p>&copy; 2025 Logan's 3D Creations. All Rights Reserved.</p>
-    <p>
+    <p class="mt-1">
       <a href="privacy.html" class="hover:text-white underline">Privacy Policy</a> |
       <a href="https://www.logans3dcreations.com/" class="hover:text-white underline">Current Website</a>
     </p>
