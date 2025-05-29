@@ -1,53 +1,71 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom 3D Print Request Form</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="favico/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favico/favicon-16x16.png">
-    <link rel="manifest" href="favico/site.webmanifest">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom 3D Print Request Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="favico/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favico/favicon-16x16.png">
+  <link rel="manifest" href="favico/site.webmanifest">
 </head>
 
-<body>
-    <header>
-        <h1>Custom 3D Print Request Form</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="custom.html">Custom Order</a>
-        <a href="cart.html">Cart</a>
-    </nav>
-    <div class="container custom">
-        <form action="/submit" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+<body class="bg-gray-900 text-white font-sans">
+  <header class="bg-gray-800 py-6 text-center shadow-md">
+    <h1 class="text-3xl font-bold">Custom 3D Print Request Form</h1>
+  </header>
 
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
+  <nav class="bg-gray-700 text-white py-3 flex justify-center space-x-4 text-sm">
+    <a href="index.html" class="hover:underline">Home</a>
+    <a href="products.html" class="hover:underline">Products</a>
+    <a href="about.html" class="hover:underline">About</a>
+    <a href="contact.html" class="hover:underline">Contact</a>
+    <a href="custom.html" class="hover:underline">Custom Order</a>
+    <a href="cart.html" class="hover:underline">Cart</a>
+  </nav>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+  <main class="max-w-2xl mx-auto mt-10 px-6">
+    <form action="/submit" method="post" class="bg-gray-800 p-8 rounded shadow-md space-y-6">
+      <div>
+        <label for="name" class="block text-sm font-medium">Name:</label>
+        <input type="text" id="name" name="name" required class="w-full mt-1 px-3 py-2 rounded bg-gray-700 text-white border border-gray-600">
+      </div>
 
-            <label for="description">Description:</label>
-            <textarea id="description" name="description" rows="6" required></textarea>
+      <div>
+        <label for="phone" class="block text-sm font-medium">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required class="w-full mt-1 px-3 py-2 rounded bg-gray-700 text-white border border-gray-600">
+      </div>
 
-            <label for="color">Color Choices:</label>
-            <input type="text" id="color" name="color" required>
+      <div>
+        <label for="email" class="block text-sm font-medium">Email:</label>
+        <input type="email" id="email" name="email" required class="w-full mt-1 px-3 py-2 rounded bg-gray-700 text-white border border-gray-600">
+      </div>
 
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-    <footer>
-        <p>&copy; 2025 Logan's 3D Creations. All Rights Reserved.</p>
-        <p><a href="privacy.html">Privacy Policy</a> | <a href="https://www.logans3dcreations.com/">Current Website</a>
-        </p>
-    </footer>
+      <div>
+        <label for="description" class="block text-sm font-medium">Description:</label>
+        <textarea id="description" name="description" rows="6" required class="w-full mt-1 px-3 py-2 rounded bg-gray-700 text-white border border-gray-600"></textarea>
+      </div>
+
+      <div>
+        <label for="color" class="block text-sm font-medium">Color Choices:</label>
+        <input type="text" id="color" name="color" required class="w-full mt-1 px-3 py-2 rounded bg-gray-700 text-white border border-gray-600">
+      </div>
+
+      <div>
+        <input type="submit" value="Submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded cursor-pointer">
+      </div>
+    </form>
+  </main>
+
+  <footer class="mt-12 text-center py-6 border-t border-gray-700 text-sm">
+    <p>&copy; 2025 Logan's 3D Creations. All Rights Reserved.</p>
+    <p>
+      <a href="privacy.html" class="hover:underline">Privacy Policy</a> |
+      <a href="https://www.logans3dcreations.com/" class="hover:underline">Current Website</a>
+    </p>
+  </footer>
 </body>
 
 </html>

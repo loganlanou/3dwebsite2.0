@@ -1,51 +1,81 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Logan's 3D Creations</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="favico/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favico/favicon-16x16.png">
-    <link rel="manifest" href="favico/site.webmanifest">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Logan's 3D Creations</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favico/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favico/favicon-16x16.png">
+  <link rel="manifest" href="favico/site.webmanifest">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#121212',
+            red: '#f00000',
+            panel: '#333',
+            border: '#444',
+            textlight: '#ccc'
+          },
+          animation: {
+            fadeInUp: 'fadeInUp 1s ease-in-out',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          }
+        }
+      }
+    };
+  </script>
 </head>
+<body class="bg-dark text-white font-sans min-h-screen flex flex-col">
 
-<body>
-    <header>
-        <h1>Contact Us</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="custom.html">Custom Order</a>
-        <a href="cart.html">Cart</a>
-    </nav>
-    <div class="container contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, feel free to reach out to us at:</p>
-        <p>Email: <a href="mailto:prints@logans3dcreations.com" style="color: #ff0000;">prints@logans3dcreations.com</a>
-        </p>
-        <p>Follow us on social media:</p>
-        <ul>
-            <li><a href="https://www.facebook.com/Logans3D" target="_blank" style="color: #ff0000;">Facebook</a></li>
-            <li><a href="https://www.instagram.com/logans3dcreations/" target="_blank"
-                    style="color: #ff0000;">Instagram</a></li>
-        </ul>
-    </div>
-    <div class="container">
-        <h2>Our Storefront</h2>
-        <p>Visit our store to see our products in person (only running summer hours) at: 25892 County Hwy S, Cadott, WI
-            54727</p>
-        <img src="store.jpg" alt="Company Store" style="width:100%;max-width:600px;">
-    </div>
-    <footer>
-        <p>&copy; 2025 Logan's 3D Creations. All Rights Reserved.</p>
-        <p><a href="privacy.html">Privacy Policy</a> | <a href="https://www.logans3dcreations.com/">Current Website</a>
-        </p>
-    </footer>
+  <header class="bg-red text-center py-6 shadow-md animate-fadeInUp">
+    <h1 class="text-4xl font-bold tracking-wide">Contact Us</h1>
+  </header>
+
+  <nav class="bg-panel flex justify-center space-x-6 py-3 text-sm font-medium animate-fadeInUp">
+    <a href="index.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">Home</a>
+    <a href="products.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">Products</a>
+    <a href="about.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">About</a>
+    <a href="contact.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">Contact</a>
+    <a href="custom.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">Custom Order</a>
+    <a href="cart.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">Cart</a>
+  </nav>
+
+  <main class="flex-grow container mx-auto px-6 py-12 max-w-4xl animate-fadeInUp space-y-12">
+    <section class="bg-panel p-8 rounded-xl shadow-lg border border-border">
+      <h2 class="text-2xl font-semibold mb-4">Get in Touch</h2>
+      <p class="mb-4">If you have any questions, feel free to reach out to us at:</p>
+      <p class="mb-4">Email: <a href="mailto:prints@logans3dcreations.com" class="text-red underline">prints@logans3dcreations.com</a></p>
+      <p class="mb-4">Follow us on social media:</p>
+      <ul class="list-disc list-inside space-y-1">
+        <li><a href="https://www.facebook.com/Logans3D" target="_blank" class="text-red underline">Facebook</a></li>
+        <li><a href="https://www.instagram.com/logans3dcreations/" target="_blank" class="text-red underline">Instagram</a></li>
+      </ul>
+    </section>
+
+    <section class="bg-panel p-8 rounded-xl shadow-lg border border-border">
+      <h2 class="text-2xl font-semibold mb-4">Our Storefront</h2>
+      <p class="mb-4">Visit our store to see our products in person (only running summer hours) at:<br>
+        25892 County Hwy S, Cadott, WI 54727</p>
+      <img src="store.jpg" alt="Company Store" class="w-full max-w-xl mx-auto rounded shadow" />
+    </section>
+  </main>
+
+  <footer class="bg-panel text-center py-6 mt-10 text-sm text-gray-300 animate-fadeInUp">
+    <p>&copy; 2025 Logan's 3D Creations. All Rights Reserved.</p>
+    <p class="mt-1">
+      <a href="privacy.html" class="underline hover:text-white">Privacy Policy</a> |
+      <a href="https://www.logans3dcreations.com/" class="underline hover:text-white">Current Website</a>
+    </p>
+  </footer>
+
 </body>
-
 </html>

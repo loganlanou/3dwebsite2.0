@@ -1,69 +1,125 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toothless</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="favico/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favico/favicon-16x16.png">
-    <link rel="manifest" href="favico/site.webmanifest">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny Toothless</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favico/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favico/favicon-16x16.png">
+  <link rel="manifest" href="favico/site.webmanifest">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#121212',
+            red: '#f00000',
+            panel: '#333',
+            border: '#444',
+            textlight: '#ccc'
+          },
+          animation: {
+            fadeInUp: 'fadeInUp 1s ease-in-out',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
+<body class="bg-dark text-white font-sans min-h-screen flex flex-col">
 
-<body>
-    <header>
-        <h1>Logan's 3D Creations</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="custom.html">Custom Order</a>
-        <a href="cart.html">Cart</a>
-    </nav>
-    <div class="productp select">
-        <img src="toothless.jpg" alt="Product Image">
-        <h1>Tiny Toothless</h1>
-        <p class="description">This product is a great addition to your desk and comes in a variety of different colors.
-        </p>
-        <p class="price">$4.99</p>
-        <h2>Body Color Top (white/black in photo)</h2>
-        <ul class="colors">
-            <li>Red</li>
-            <li>Blue</li>
-            <li>Green</li>
-            <li>Yellow</li>
-        </ul>
-        <h2>Body Color Bottom (white/black in photo)</h2>
-        <ul class="colors">
-            <li>Red</li>
-            <li>Blue</li>
-            <li>Green</li>
-            <li>Yellow</li>
-        </ul>
-        <h2>Spikes Color (black in photo)</h2>
-        <ul class="colors">
-            <li>Red</li>
-            <li>Blue</li>
-            <li>Green</li>
-            <li>Yellow</li>
-        </ul>
-        <h2>Eye Color (black/green in photo)</h2>
-        <ul class="colors">
-            <li>Red</li>
-            <li>Blue</li>
-            <li>Green</li>
-            <li>Yellow</li>
-        </ul>
-        <button class="back-button" onclick="history.back()">Back</button>
+  <!-- Header -->
+  <header class="bg-red text-center py-6 shadow-md animate-fadeInUp">
+    <h1 class="text-4xl font-bold tracking-wide">Logan's 3D Creations</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-panel flex justify-center space-x-6 py-3 text-sm font-medium animate-fadeInUp">
+    <a href="index.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">Home</a>
+    <a href="products.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">Products</a>
+    <a href="about.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">About</a>
+    <a href="contact.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">Contact</a>
+    <a href="custom.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">Custom Order</a>
+    <a href="cart.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">Cart</a>
+  </nav>
+
+  <!-- Product Section -->
+  <main class="container mx-auto px-6 py-12 animate-fadeInUp">
+    <div class="bg-panel max-w-2xl mx-auto rounded-xl p-6 shadow-lg border border-border">
+      <img src="toothless.jpg" alt="Tiny Toothless" class="w-full h-auto mb-6 rounded-lg shadow-md transition hover:opacity-100 opacity-90">
+
+      <h1 class="text-3xl font-bold mb-4 text-center">Tiny Toothless</h1>
+      <p class="text-textlight text-center mb-2">This product is a great addition to your desk and comes in a variety of different colors.</p>
+      <p class="text-white text-xl text-center font-bold mb-6">$4.99</p>
+
+      <!-- Color Options -->
+      <div class="space-y-6 text-textlight">
+        <div>
+          <h2 class="text-lg font-semibold mb-2 text-white">Body Color Top (white/black in photo)</h2>
+          <ul class="flex flex-wrap gap-2">
+            <li class="bg-border rounded px-3 py-1">Red</li>
+            <li class="bg-border rounded px-3 py-1">Blue</li>
+            <li class="bg-border rounded px-3 py-1">Green</li>
+            <li class="bg-border rounded px-3 py-1">Yellow</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold mb-2 text-white">Body Color Bottom (white/black in photo)</h2>
+          <ul class="flex flex-wrap gap-2">
+            <li class="bg-border rounded px-3 py-1">Red</li>
+            <li class="bg-border rounded px-3 py-1">Blue</li>
+            <li class="bg-border rounded px-3 py-1">Green</li>
+            <li class="bg-border rounded px-3 py-1">Yellow</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold mb-2 text-white">Spikes Color (black in photo)</h2>
+          <ul class="flex flex-wrap gap-2">
+            <li class="bg-border rounded px-3 py-1">Red</li>
+            <li class="bg-border rounded px-3 py-1">Blue</li>
+            <li class="bg-border rounded px-3 py-1">Green</li>
+            <li class="bg-border rounded px-3 py-1">Yellow</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-lg font-semibold mb-2 text-white">Eye Color (black/green in photo)</h2>
+          <ul class="flex flex-wrap gap-2">
+            <li class="bg-border rounded px-3 py-1">Red</li>
+            <li class="bg-border rounded px-3 py-1">Blue</li>
+            <li class="bg-border rounded px-3 py-1">Green</li>
+            <li class="bg-border rounded px-3 py-1">Yellow</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Back Button -->
+      <button onclick="history.back()" class="mt-8 w-full bg-red text-white py-2 rounded hover:bg-red/80 transition transform hover:scale-105 font-semibold">
+        Back
+      </button>
     </div>
-    <footer>
-        <p>&copy; 2025 Logan's 3D Creations. All Rights Reserved.</p>
-        <p><a href="privacy.html">Privacy Policy</a> | <a href="https://www.logans3dcreations.com/">Current Website</a>
-        </p>
-    </footer>
-</body>
+  </main>
 
+  <!-- Footer -->
+  <footer class="bg-panel text-center py-6 mt-auto text-sm text-gray-300 animate-fadeInUp">
+    <p>&copy; 2025 Logan's 3D Creations. All Rights Reserved.</p>
+    <p class="mt-1">
+      <a href="privacy.html" class="underline hover:text-white">Privacy Policy</a> |
+      <a href="https://www.logans3dcreations.com/" class="underline hover:text-white">Current Website</a>
+    </p>
+  </footer>
+
+</body>
 </html>
