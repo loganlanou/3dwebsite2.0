@@ -1,42 +1,88 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="favico/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favico/favicon-16x16.png">
-    <link rel="manifest" href="favico/site.webmanifest">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Logan's 3D Creations</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Logan's 3D Creations</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favico/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favico/favicon-16x16.png">
+  <link rel="manifest" href="favico/site.webmanifest">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#121212',
+            red: '#f00000',
+            panel: '#333',
+            gradientStart: '#2f2c2c',
+            gradientEnd: '#1a1a1a',
+            textlight: '#ccc'
+          },
+          animation: {
+            fadeInUp: 'fadeInUp 1.5s ease-in-out',
+            fadeInDown: 'fadeInDown 1s ease-in-out'
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            fadeInDown: {
+              '0%': { opacity: '0', transform: 'translateY(-20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
+<body class="min-h-screen font-sans text-white bg-gradient-to-br from-gradientStart to-gradientEnd overflow-x-hidden flex flex-col">
 
-<body class="about">
-    <header>
-        <h1>About The Company</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="custom.html">Custom Order</a>
-        <a href="cart.html">Cart</a>
-    </nav>
-    <div class="container about">
-        <h2>About The Company</h2>
-        <p>Welcome to Logan's 3D Creations! We are a local Wisconsin based 3D printing company dedicated to bringing
-            your ideas to
-            life. With every product Whether a stock product or custom design, we work to provide top of the line
-            quality with some of the most advanced 3D printing technology available.</p>
-        <p>At Logan's 3D Creations, we believe in innovation, quality, and customer satisfaction. Whenever you need a
-            prototype, a custom part, or a unique gift, we are here to help you every step of the way.</p>
-    </div>
-    <footer>
-        <p>&copy; 2025 Logan's 3D Creations. All Rights Reserved.</p>
-        <p><a href="privacy.html">Privacy Policy</a> | <a href="https://www.logans3dcreations.com/">Current Website</a>
-        </p>
-    </footer>
+  <!-- Header -->
+  <header class="bg-red text-center py-6 shadow-md animate-fadeInDown">
+    <h1 class="text-4xl font-bold tracking-wide">About The Company</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-panel flex justify-center space-x-6 py-3 text-sm font-medium animate-fadeInDown">
+    <a href="index.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">Home</a>
+    <a href="products.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">Products</a>
+    <a href="about.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">About</a>
+    <a href="contact.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">Contact</a>
+    <a href="custom.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">Custom Order</a>
+    <a href="cart.html" class="hover:bg-red px-4 py-2 transition transform hover:scale-110">Cart</a>
+  </nav>
+
+  <!-- About Content -->
+  <main class="flex-grow container mx-auto px-6 py-16 text-center animate-fadeInUp">
+    <h2 class="text-3xl font-bold text-red bg-panel inline-block px-6 py-3 rounded-lg shadow-lg mb-8">
+      About The Company
+    </h2>
+    <p class="text-textlight text-lg leading-8 max-w-3xl mx-auto mb-6">
+      Welcome to Logan's 3D Creations! We are a local Wisconsin-based 3D printing company dedicated to bringing your ideas to life. Whether a stock product or a custom design, we work to provide top-of-the-line quality with some of the most advanced 3D printing technology available.
+    </p>
+    <p class="text-textlight text-lg leading-8 max-w-3xl mx-auto">
+      At Logan's 3D Creations, we believe in innovation, quality, and customer satisfaction. Whether you need a prototype, a custom part, or a unique gift, we are here to help you every step of the way.
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-panel text-center py-6 text-sm text-gray-300 animate-fadeInUp">
+    <p>&copy; 2025 Logan's 3D Creations. All Rights Reserved.</p>
+    <p class="mt-1">
+      <a href="privacy.html" class="underline hover:text-white">Privacy Policy</a> |
+      <a href="https://www.logans3dcreations.com/" class="underline hover:text-white">Current Website</a>
+    </p>
+  </footer>
+
 </body>
-
 </html>
