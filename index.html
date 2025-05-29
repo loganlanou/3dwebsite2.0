@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Logan's 3D Creations</title>
 
-  <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="favico/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favico/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favico/favicon-16x16.png">
   <link rel="manifest" href="favico/site.webmanifest">
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -51,22 +49,52 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="bg-card mt-10 mx-6 md:mx-auto md:max-w-6xl rounded-xl p-10 shadow-lg text-center">
     <div class="flex flex-col md:flex-row items-center gap-10">
       <img src="logo.png" alt="Logo" class="w-40 h-auto rounded-lg shadow-md hover:scale-105 transition duration-300">
       <div class="text-left">
         <h2 class="text-3xl font-bold text-white mb-2">Welcome to Logan's 3D Creations</h2>
         <p class="text-textlight text-lg">
-          Home of high-quality, custom-crafted 3D prints. From imaginative models to functional designs, 
-          we blend creativity and precision with cutting-edge technology.
+          Premium 3D prints crafted for collectors, creatives, and inventors. Built with detail. Backed by passion.
         </p>
+        <a href="products.html" class="inline-block mt-4 bg-red text-white font-semibold px-6 py-2 rounded hover:bg-white hover:text-red transition">Explore Catalog</a>
       </div>
     </div>
   </section>
 
-  <!-- Video Section -->
-  <section class="mt-16 mx-6 md:mx-auto md:max-w-5xl">
+  <!-- Features -->
+  <section class="mt-16 mx-6 md:mx-auto md:max-w-6xl grid gap-8 md:grid-cols-3 text-center">
+    <div class="bg-card p-6 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold mb-2">Custom Models</h3>
+      <p class="text-textlight">Collaborate on original concepts or upload your own files — we’ll bring it to life.</p>
+    </div>
+    <div class="bg-card p-6 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold mb-2">Durable Materials</h3>
+      <p class="text-textlight">From translucent PETG to high-strength resin, your design will stand the test of time.</p>
+    </div>
+    <div class="bg-card p-6 rounded-lg shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold mb-2">Fast Turnaround</h3>
+      <p class="text-textlight">Most orders ship within 3–5 business days. Expedite options available at checkout.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Preview -->
+  <section class="mt-20 mx-6 md:mx-auto md:max-w-6xl">
+    <h3 class="text-2xl font-semibold text-center mb-6">Featured Prints</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="images/sample1.jpg" alt="Sample 1" class="rounded-lg shadow-md hover:scale-105 transition">
+      <img src="images/sample2.jpg" alt="Sample 2" class="rounded-lg shadow-md hover:scale-105 transition">
+      <img src="images/sample3.jpg" alt="Sample 3" class="rounded-lg shadow-md hover:scale-105 transition">
+      <img src="images/sample4.jpg" alt="Sample 4" class="rounded-lg shadow-md hover:scale-105 transition">
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="w-20 h-1 bg-red mx-auto my-12 rounded-full"></div>
+
+  <!-- Video -->
+  <section class="mx-6 md:mx-auto md:max-w-5xl">
     <div class="aspect-video overflow-hidden rounded-xl shadow-lg border border-neutral-700">
       <iframe
         class="w-full h-full"
@@ -78,11 +106,8 @@
     </div>
   </section>
 
-  <!-- Divider -->
-  <div class="w-20 h-1 bg-red mx-auto my-12 rounded-full"></div>
-
-  <!-- Mission Statement -->
-  <section class="text-center max-w-3xl mx-auto px-6 mb-16">
+  <!-- Mission -->
+  <section class="text-center max-w-3xl mx-auto px-6 my-16">
     <h3 class="text-2xl font-semibold mb-4">Driven by Innovation</h3>
     <p class="text-textlight text-lg leading-relaxed">
       We believe in making premium 3D printing accessible to everyone. Whether you're a collector, a designer, 
